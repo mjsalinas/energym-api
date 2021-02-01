@@ -12,5 +12,6 @@ namespace EnergymApp.API.Domino.ModelosDB
         public int IdOportunidad { get; set; }
         public string Oportunidad { get; set; }
         public DateTime FechaTransaccion { get; set; }
+        public string TipoOportunidad { get; set; }
     }
 }

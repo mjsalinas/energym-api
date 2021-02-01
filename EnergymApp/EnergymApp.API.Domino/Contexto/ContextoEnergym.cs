@@ -203,6 +203,13 @@ namespace EnergymApp.API.Domino.Contexto
                     .HasColumnType("varchar(500)")
                     .HasCharSet("utf8mb4")
                     .HasCollation("utf8mb4_0900_ai_ci");
+
+                entity.Property(e => e.TipoOportunidad)
+                    .IsRequired()
+                    .HasColumnName("tipo_oportunidad")
+                    .HasColumnType("varchar(45)")
+                    .HasCharSet("utf8mb4")
+                    .HasCollation("utf8mb4_0900_ai_ci");
             });
 
             modelBuilder.Entity<Pagos>(entity =>
