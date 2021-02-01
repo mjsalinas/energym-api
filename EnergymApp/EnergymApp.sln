@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp", "EnergymApp\EnergymApp.csproj", "{E4CEB7EA-B3BA-45E8-B37D-9F46DC1A76FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Infraestructura", "EnergymApp.API.Infraestructura\EnergymApp.API.Infraestructura.csproj", "{75655A62-BF6F-4939-B6BC-C68106B066AC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF08327B-54EB-4FC7-8E63-F750CB98CB61} = {AF08327B-54EB-4FC7-8E63-F750CB98CB61}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Domino", "EnergymApp.API.Domino\EnergymApp.API.Domino.csproj", "{AF08327B-54EB-4FC7-8E63-F750CB98CB61}"
 EndProject

@@ -1,8 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositorios\Clientes\Clientes\" />
+    <Folder Include="Repositorios\Clientes\DatosSeguimiento\" />
+    <Folder Include="Repositorios\Clientes\Pagos\" />
+    <Folder Include="Repositorios\Clientes\RegistroPagos\" />
+    <Folder Include="Repositorios\Configuraciones\Oportunidades\" />
+    <Folder Include="Repositorios\Grupos\ModalidadGrupal\" />
+    <Folder Include="Repositorios\Configuraciones\CamposSeguimiento\" />
+    <Folder Include="Repositorios\Configuraciones\TipoPlanes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EnergymApp.API.Aplicacion\EnergymApp.API.Aplicacion.csproj" />
+    <ProjectReference Include="..\EnergymApp.API.Domino\EnergymApp.API.Domino.csproj" />
+  </ItemGroup>
 
 </Project>
