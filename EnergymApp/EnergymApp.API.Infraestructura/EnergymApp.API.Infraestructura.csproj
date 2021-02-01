@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EnergymApp.API.Aplicacion\EnergymApp.API.Aplicacion.csproj" />
-    <ProjectReference Include="..\EnergymApp.API.Domino\EnergymApp.API.Domino.csproj" />
+    <ProjectReference Include="..\EnergymApp.API.Domino\EnergymApp.API.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

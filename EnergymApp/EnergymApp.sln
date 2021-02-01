@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Infraestruct
 		{AF08327B-54EB-4FC7-8E63-F750CB98CB61} = {AF08327B-54EB-4FC7-8E63-F750CB98CB61}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Domino", "EnergymApp.API.Domino\EnergymApp.API.Domino.csproj", "{AF08327B-54EB-4FC7-8E63-F750CB98CB61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Dominio", "EnergymApp.API.Domino\EnergymApp.API.Dominio.csproj", "{AF08327B-54EB-4FC7-8E63-F750CB98CB61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Aplicacion", "EnergymApp.API.Aplicacion\EnergymApp.API.Aplicacion.csproj", "{25609A5F-A296-46B6-9EF5-016FB23B46D4}"
 EndProject

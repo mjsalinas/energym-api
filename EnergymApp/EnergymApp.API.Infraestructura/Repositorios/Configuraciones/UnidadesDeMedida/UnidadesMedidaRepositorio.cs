@@ -47,7 +47,7 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.UnidadesDe
             {
                 return new UnidadesMedidaDTO
                 {
-                    mensajeDeError = ex.Message
+                    MensajeDeError = ex.Message
                 };
             }
         }
@@ -63,7 +63,7 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.UnidadesDe
                 {
                     return new UnidadesMedidaDTO
                     {
-                        mensajeDeError = "Unidad de Medida no existe"
+                        MensajeDeError = "Unidad de Medida no existe"
                     };
                 };
                 unidadMedidaEntidad.UnidadMedida = unidadMedida.UnidadMedida;
@@ -75,7 +75,7 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.UnidadesDe
             {
                 return new UnidadesMedidaDTO
                 {
-                    mensajeDeError = ex.Message
+                    MensajeDeError = ex.Message
                 };
             }
         }

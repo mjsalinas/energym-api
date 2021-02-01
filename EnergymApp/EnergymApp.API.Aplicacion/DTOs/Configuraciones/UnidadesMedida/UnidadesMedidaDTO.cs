@@ -9,6 +9,6 @@ namespace EnergymApp.API.Aplicacion.DTOs.Configuraciones.UnidadesMedida
         public int IdUnidadMedida { get; set; }
         public string UnidadMedida { get; set; }
         public byte? RegistroOculto { get; set; }
-        public string mensajeDeError { get; set; }
+        public string MensajeDeError { get; set; }
     }
 }
