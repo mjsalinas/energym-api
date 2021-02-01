@@ -10,7 +10,6 @@
     <Folder Include="DTOs\Clientes\DatosSeguimiento\" />
     <Folder Include="DTOs\Clientes\Pagos\" />
     <Folder Include="DTOs\Clientes\RegistroPagos\" />
-    <Folder Include="DTOs\Configuraciones\CamposSeguimiento\" />
     <Folder Include="DTOs\Configuraciones\Oportunidades\" />
     <Folder Include="DTOs\Configuraciones\TipoPlanes\" />
     <Folder Include="DTOs\Grupos\ModalidadGrupal\" />
