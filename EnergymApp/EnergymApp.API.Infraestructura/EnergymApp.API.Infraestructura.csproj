@@ -6,6 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Repositorios\Configuraciones\ModalidadGrupal\**" />
+    <Compile Remove="Repositorios\Configuraciones\Pagos\**" />
+    <EmbeddedResource Remove="Repositorios\Configuraciones\ModalidadGrupal\**" />
+    <EmbeddedResource Remove="Repositorios\Configuraciones\Pagos\**" />
+    <None Remove="Repositorios\Configuraciones\ModalidadGrupal\**" />
+    <None Remove="Repositorios\Configuraciones\Pagos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Repositorios\Clientes\Clientes\" />
     <Folder Include="Repositorios\Clientes\DatosSeguimiento\" />
     <Folder Include="Repositorios\Clientes\Pagos\" />
