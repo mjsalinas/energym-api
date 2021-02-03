@@ -6,6 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DTOs\Configuraciones\ModalidadGrupal\**" />
+    <Compile Remove="DTOs\Configuraciones\Pagos\**" />
+    <EmbeddedResource Remove="DTOs\Configuraciones\ModalidadGrupal\**" />
+    <EmbeddedResource Remove="DTOs\Configuraciones\Pagos\**" />
+    <None Remove="DTOs\Configuraciones\ModalidadGrupal\**" />
+    <None Remove="DTOs\Configuraciones\Pagos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    
     <Folder Include="DTOs\Clientes\DatosSeguimiento\" />
     <Folder Include="DTOs\Clientes\Pagos\" />
     <Folder Include="DTOs\Clientes\RegistroPagos\" />
