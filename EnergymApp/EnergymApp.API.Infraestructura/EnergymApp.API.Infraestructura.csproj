@@ -6,10 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositorios\Clientes\Clientes\" />
-    <Folder Include="Repositorios\Clientes\DatosSeguimiento\" />
-    <Folder Include="Repositorios\Clientes\Pagos\" />
-    <Folder Include="Repositorios\Clientes\RegistroPagos\" />
+    <Folder Include="Repositorios\Cliente\DatosSeguimiento\" />
+    <Folder Include="Repositorios\Cliente\Pagos\" />
+    <Folder Include="Repositorios\Cliente\RegistroPagos\" />
     <Folder Include="Repositorios\Configuraciones\Oportunidades\" />
     <Folder Include="Repositorios\Grupos\ModalidadGrupal\" />
     <Folder Include="Repositorios\Configuraciones\CamposSeguimiento\" />
