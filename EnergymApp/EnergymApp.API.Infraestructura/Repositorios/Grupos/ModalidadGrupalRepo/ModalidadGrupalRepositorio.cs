@@ -31,7 +31,7 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.ModalidadG
             return modalidadGrupalDTO;
         }
 
-        public ModalidadGrupalDTO GuardarUnidadMedida(ModalidadGrupalDTO modalidadGrupal)
+        public ModalidadGrupalDTO GuardarModalidadGrupal(ModalidadGrupalDTO modalidadGrupal)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.ModalidadG
             }
         }
 
-        public ModalidadGrupalDTO ModificarUnidadMedida(ModalidadGrupalDTO ModalidadGrupal)
+        public ModalidadGrupalDTO ModificarModalidadGrupal(ModalidadGrupalDTO ModalidadGrupal)
         {
             try
             {
