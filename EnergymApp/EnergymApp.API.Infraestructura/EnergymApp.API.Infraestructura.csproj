@@ -8,7 +8,6 @@
   <ItemGroup>
     <Folder Include="Repositorios\Cliente\DatosSeguimiento\" />
     <Folder Include="Repositorios\Cliente\Pagos\" />
-    <Folder Include="Repositorios\Cliente\RegistroPagos\" />
     <Compile Remove="Repositorios\Configuraciones\ModalidadGrupal\**" />
     <Compile Remove="Repositorios\Configuraciones\Pagos\**" />
     <EmbeddedResource Remove="Repositorios\Configuraciones\ModalidadGrupal\**" />
