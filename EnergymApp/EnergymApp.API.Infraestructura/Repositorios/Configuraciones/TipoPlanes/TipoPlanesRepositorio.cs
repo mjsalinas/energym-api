@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.TipoPlanes
 {
-    public class TipoPlanesRepositorio
+    public class TipoPlanesRepositorio: ITipoPlanesRepositorio
     {
        public List<TipoPlanesDTO> ObtenerTipoPlanes()
         {
@@ -56,6 +56,20 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.TipoPlanes
                 };
             }
         }
+        public TipoPlanesDTO ObtenerTipoPlanId(int id)
+        {
+            ContextoEnergym db = new ContextoEnergym();
+            TipoDePlan planPorId = new TipoDePlan();
+            planPorId = db.TipoDePlan.FirstOrDefault(plan => plan.IdPlan == id);
 
+            return new TipoPlanesDTO
+            {
+                IdPlan = planPorId.IdPlan,
+                NombrePlan = planPorId.NombrePlan,
+                NoIntegrantes = planPorId.NoIntegrantes,
+                CostoPlan = planPorId.CostoPlan,
+                RegistroOculto = planPorId.RegistroOculto,
+            };
+        }
     }
 }

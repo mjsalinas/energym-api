@@ -8,7 +8,7 @@ using EnergymApp.API.Aplicacion.DTOs.Clientes.Clientes;
 
 namespace EnergymApp.API.Infraestructura.Repositorios.Cliente.Cliente
 {
-    public class ClientesRepositorio
+    public class ClientesRepositorio : IClientesRepositorio
     {
         public List<ClientesDTO> ObtenerClientes()
         {

@@ -3,16 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp", "EnergymApp\EnergymApp.csproj", "{E4CEB7EA-B3BA-45E8-B37D-9F46DC1A76FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergymApp", "EnergymApp\EnergymApp.csproj", "{E4CEB7EA-B3BA-45E8-B37D-9F46DC1A76FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Infraestructura", "EnergymApp.API.Infraestructura\EnergymApp.API.Infraestructura.csproj", "{75655A62-BF6F-4939-B6BC-C68106B066AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergymApp.API.Infraestructura", "EnergymApp.API.Infraestructura\EnergymApp.API.Infraestructura.csproj", "{75655A62-BF6F-4939-B6BC-C68106B066AC}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AF08327B-54EB-4FC7-8E63-F750CB98CB61} = {AF08327B-54EB-4FC7-8E63-F750CB98CB61}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Dominio", "EnergymApp.API.Domino\EnergymApp.API.Dominio.csproj", "{AF08327B-54EB-4FC7-8E63-F750CB98CB61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergymApp.API.Dominio", "EnergymApp.API.Domino\EnergymApp.API.Dominio.csproj", "{AF08327B-54EB-4FC7-8E63-F750CB98CB61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Aplicacion", "EnergymApp.API.Aplicacion\EnergymApp.API.Aplicacion.csproj", "{25609A5F-A296-46B6-9EF5-016FB23B46D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergymApp.API.DTO", "EnergymApp.API.Aplicacion\EnergymApp.API.DTO.csproj", "{25609A5F-A296-46B6-9EF5-016FB23B46D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Aplicacion.Servicios", "EnergymApp.API.Aplicacion.Servicios\EnergymApp.API.Aplicacion.Servicios.csproj", "{69F8BDBC-9886-4C18-A995-62BF7027B40C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{75655A62-BF6F-4939-B6BC-C68106B066AC} = {75655A62-BF6F-4939-B6BC-C68106B066AC}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +41,10 @@ Global
 		{25609A5F-A296-46B6-9EF5-016FB23B46D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25609A5F-A296-46B6-9EF5-016FB23B46D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25609A5F-A296-46B6-9EF5-016FB23B46D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69F8BDBC-9886-4C18-A995-62BF7027B40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69F8BDBC-9886-4C18-A995-62BF7027B40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69F8BDBC-9886-4C18-A995-62BF7027B40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69F8BDBC-9886-4C18-A995-62BF7027B40C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

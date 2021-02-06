@@ -7,20 +7,24 @@
 
   <ItemGroup>
     <Folder Include="Repositorios\Cliente\DatosSeguimiento\" />
-    <Folder Include="Repositorios\Cliente\Pagos\" />
+    <Compile Remove="Repositorios\Cliente\Pagos\**" />
     <Compile Remove="Repositorios\Configuraciones\ModalidadGrupal\**" />
+    <Compile Remove="Repositorios\Configuraciones\Oportunidades\**" />
     <Compile Remove="Repositorios\Configuraciones\Pagos\**" />
+    <EmbeddedResource Remove="Repositorios\Cliente\Pagos\**" />
     <EmbeddedResource Remove="Repositorios\Configuraciones\ModalidadGrupal\**" />
+    <EmbeddedResource Remove="Repositorios\Configuraciones\Oportunidades\**" />
     <EmbeddedResource Remove="Repositorios\Configuraciones\Pagos\**" />
+    <None Remove="Repositorios\Cliente\Pagos\**" />
     <None Remove="Repositorios\Configuraciones\ModalidadGrupal\**" />
+    <None Remove="Repositorios\Configuraciones\Oportunidades\**" />
     <None Remove="Repositorios\Configuraciones\Pagos\**" />
-    <Folder Include="Repositorios\Configuraciones\Oportunidades\" />
     <Folder Include="Repositorios\Configuraciones\CamposSeguimiento\" />
     <Folder Include="Repositorios\Configuraciones\TipoPlanes\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EnergymApp.API.Aplicacion\EnergymApp.API.Aplicacion.csproj" />
+    <ProjectReference Include="..\EnergymApp.API.Aplicacion\EnergymApp.API.DTO.csproj" />
     <ProjectReference Include="..\EnergymApp.API.Domino\EnergymApp.API.Dominio.csproj" />
   </ItemGroup>
 

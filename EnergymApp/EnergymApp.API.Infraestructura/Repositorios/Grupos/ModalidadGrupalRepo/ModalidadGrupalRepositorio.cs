@@ -5,11 +5,11 @@ using EnergymApp.API.Domino.ModelosDB;
 using EnergymApp.API.Domino.Contexto;
 using System.Linq;
 using EnergymApp.API.Aplicacion.DTOs.Configuraciones.ModalidadGrupal;
-
+using EnergymApp.API.Infraestructura.Repositorios.Grupos.ModalidadGrupalRepo;
 
 namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.ModalidadGrupalRepo
 {
-        public class ModalidadGrupalRepositorio
+        public class ModalidadGrupalRepositorio: IModalidadGrupalRepositorio
         {
         private const string MensajeErrorInexistencia = "Unidad de Medida no existe";
         public List<ModalidadGrupalDTO> ObtenerModalidadGrupal()
@@ -86,7 +86,20 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.ModalidadG
                 };
             }
         }
+        public ModalidadGrupalDTO ObtenerGrupoPorId(int id)
+        {
+            ContextoEnergym db = new ContextoEnergym();
+            ModalidadGrupal modalidadGrupalEntidad = new ModalidadGrupal();
+            modalidadGrupalEntidad = db.ModalidadGrupal.FirstOrDefault(grupo => grupo.IdGrupo == id);
+            return new ModalidadGrupalDTO
+            {
+                IdGrupo = modalidadGrupalEntidad.IdGrupo,
+                IdPlan = modalidadGrupalEntidad.IdPlan,
+                LiderDeGrupo = modalidadGrupalEntidad.LiderGrupo,
+                GrupoActivo = modalidadGrupalEntidad.GrupoActivo,
+            };
+        }
 
     }
-        }
+}
     

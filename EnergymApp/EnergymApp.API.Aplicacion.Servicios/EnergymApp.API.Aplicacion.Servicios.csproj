@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Servicios\Clientes\DatosSeguimiento\" />
+    <Folder Include="Servicios\Clientes\Pagos\" />
+    <Folder Include="Servicios\Clientes\RegistroPagosServicios\" />
+    <Folder Include="Servicios\Configuraciones\" />
+    <Folder Include="Servicios\Grupos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EnergymApp.API.Infraestructura\EnergymApp.API.Infraestructura.csproj" />
+  </ItemGroup>
+
+</Project>

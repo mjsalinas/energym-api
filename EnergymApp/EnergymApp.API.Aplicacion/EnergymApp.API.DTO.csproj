@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTOs\Configuraciones\Oportunidades\**" />
+    <EmbeddedResource Remove="DTOs\Configuraciones\Oportunidades\**" />
+    <None Remove="DTOs\Configuraciones\Oportunidades\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    
+    <Folder Include="DTOs\Clientes\DatosSeguimiento\" />
+    <Folder Include="DTOs\Clientes\Pagos\" />
+    <Folder Include="DTOs\Configuraciones\TipoPlanes\" />
+    <Folder Include="DTOs\Grupos\ModalidadGrupalDTO\" />
+  </ItemGroup>
+
+</Project>
