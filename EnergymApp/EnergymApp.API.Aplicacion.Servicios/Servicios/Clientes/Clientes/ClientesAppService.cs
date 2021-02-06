@@ -16,7 +16,7 @@ namespace EnergymApp.API.Aplicacion.Servicios.Clientes.Clientes
         private readonly ITipoPlanesRepositorio _tipoPlanesRepositorio;
         private readonly IModalidadGrupalRepositorio _modalidadGrupalRepositorio;
 
-        public ClientesAppService(IClientesRepositorio clientesRepositorio, 
+        public ClientesAppService(IClientesRepositorio clientesRepositorio,
             ITipoPlanesRepositorio tipoPlanesRepositorio,
             IModalidadGrupalRepositorio modalidadGrupalRepositorio)
         {
@@ -27,12 +27,12 @@ namespace EnergymApp.API.Aplicacion.Servicios.Clientes.Clientes
             _tipoPlanesRepositorio = tipoPlanesRepositorio;
             _modalidadGrupalRepositorio = modalidadGrupalRepositorio;
         }
-        public List<ClientesDTO> ObtenerClientes (ObtenerClientesRequest request)
+        public List<ClientesDTO> ObtenerClientes(ObtenerClientesRequest request)
         {
             List<ClientesDTO> clientesListados = _clientesRepositorio.ObtenerClientes();
             return clientesListados;
         }
-        public ClientesDTO CrearNuevoCliente (NuevoClienteRequest request)
+        public ClientesDTO CrearNuevoCliente(NuevoClienteRequest request)
         {
             if (request.Nombre == null || request.Nombre == String.Empty) throw new ArgumentNullException("nombreDeClienteVacio");
             if (request.NumeroTelefono == null || request.NumeroTelefono == String.Empty) throw new ArgumentNullException("numeroTelefonoVacio");
@@ -70,8 +70,11 @@ namespace EnergymApp.API.Aplicacion.Servicios.Clientes.Clientes
                 Activo = 1,
                 EstadoCliente = "En mora",
             };
-           ClientesDTO response = _clientesRepositorio.GuardarCliente(clienteDTO);
-           return response;
+            ClientesDTO response = _clientesRepositorio.GuardarCliente(clienteDTO);
+            return response;
+        }
+        public ClientesDTO ModificarCliente(ModificarClienteRequest request) { 
+            return null; 
         }
     }
 }

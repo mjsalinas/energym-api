@@ -4,5 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EnergymApp.API.Aplicacion.Servicios\EnergymApp.API.Aplicacion.Servicios.csproj" />
+  </ItemGroup>
+
 
 </Project>
