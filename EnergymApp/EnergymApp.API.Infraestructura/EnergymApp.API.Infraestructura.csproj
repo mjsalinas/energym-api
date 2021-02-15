@@ -18,7 +18,6 @@
     <None Remove="Repositorios\Configuraciones\ModalidadGrupal\**" />
     <None Remove="Repositorios\Configuraciones\Oportunidades\**" />
     <None Remove="Repositorios\Configuraciones\Pagos\**" />
-    <Folder Include="Repositorios\Configuraciones\CamposSeguimiento\" />
     <Folder Include="Repositorios\Configuraciones\TipoPlanes\" />
   </ItemGroup>
 

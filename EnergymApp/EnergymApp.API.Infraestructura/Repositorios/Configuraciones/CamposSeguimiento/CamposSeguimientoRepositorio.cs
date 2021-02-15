@@ -8,8 +8,7 @@ using EnergymApp.API.Aplicacion.DTOs.Configuraciones.CamposSeguimiento;
 
 namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.CamposSeguimiento
 {
-    public class CampoSeguimientoRepositorio
-    {
+  
         public class CamposSeguimientoRepositorio
         {
             private const string MensajeErrorInexistencia = "Unidad de Medida no existe";
@@ -57,6 +56,11 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.CamposSegu
                 }
             }
 
+            public CamposSeguimientoDTO GuardarCampoSeguimiento(CamposSeguimientoDTO camposSeguimientoDTO)
+            {
+                throw new NotImplementedException();
+            }
+
             public CamposSeguimientoDTO ModificarUnidadMedida(CamposSeguimientoDTO campoSeguimiento)
             {
                 try
@@ -86,5 +90,5 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.CamposSegu
                 }
             }
         }
-    }
+    
 }
