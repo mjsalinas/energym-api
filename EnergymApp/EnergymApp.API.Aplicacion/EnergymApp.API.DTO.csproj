@@ -12,8 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    
-    <Folder Include="DTOs\Clientes\DatosSeguimiento\" />
     <Folder Include="DTOs\Clientes\Pagos\" />
     <Folder Include="DTOs\Grupos\ModalidadGrupalDTO\" />
   </ItemGroup>

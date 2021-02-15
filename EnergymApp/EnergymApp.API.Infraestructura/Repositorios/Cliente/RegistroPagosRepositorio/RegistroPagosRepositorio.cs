@@ -8,7 +8,7 @@ using EnergymApp.API.Aplicacion.DTOs.Clientes.RegistroPagosDTO;
 
 namespace EnergymApp.API.Infraestructura.Repositorios.Cliente.RegistroPagosRepositorio
 {
-    class RegistroPagosRepositorio
+    public class RegistroPagosRepositorio : IRegistroPagosRepositorio
     {
         public List<RegistroPagosDTO> RegistroPagosDTOs()
         {

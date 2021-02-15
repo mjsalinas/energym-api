@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositorios\Cliente\DatosSeguimiento\" />
     <Compile Remove="Repositorios\Cliente\Pagos\**" />
     <Compile Remove="Repositorios\Configuraciones\ModalidadGrupal\**" />
     <Compile Remove="Repositorios\Configuraciones\Oportunidades\**" />

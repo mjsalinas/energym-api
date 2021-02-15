@@ -11,5 +11,6 @@ namespace EnergymApp.API.Aplicacion.DTOs.Clientes.DatosSeguimiento
         public string DatoSeguimiento { get; set; }
         public DateTime FechaRegistro { get; set; }
         public string MensajeDeError { get; set; }
+        
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using EnergymApp.API.Domino.ModelosDB;
 using EnergymApp.API.Domino.Contexto;
 using System.Linq;
@@ -9,15 +8,15 @@ using EnergymApp.API.Aplicacion.DTOs.Clientes.DatosSeguimiento;
 
 namespace EnergymApp.API.Infraestructura.Repositorios.Cliente.DatosSeguimientoRepositorio
 {
-    public class DatosSeguimientoRepositorio
+    public class DatosSeguimientoRepositorio : IDatosSeguimientoRepositorio
     {
         public List<DatosSeguimientoDTO> ObtenerDatosSegumiento()
         {
             ContextoEnergym db = new ContextoEnergym();
-            List<DatosSeguimiento> datos = db.DatosSeguimiento.ToList();
+            List<DatosSeguimiento> datosseguimiento = db.DatosSeguimiento.ToList();
             List<DatosSeguimientoDTO> datosDTO = new List<DatosSeguimientoDTO>();
             
-            foreach (var dsDTO in datos)
+            foreach (var dsDTO in datosseguimiento)
             {
                 datosDTO.Add(new DatosSeguimientoDTO
                 {
