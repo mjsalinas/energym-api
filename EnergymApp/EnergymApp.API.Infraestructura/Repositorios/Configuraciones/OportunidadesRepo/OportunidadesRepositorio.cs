@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.OportunidadesRepo
 {
-    public class OportunidadesRepositorio
+    public class OportunidadesRepositorio: IOportunidadesRepositorio
     {
         public List<OportunidadesDTO> ObtenerOportunidades()
         {

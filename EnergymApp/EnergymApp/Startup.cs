@@ -3,6 +3,7 @@ using EnergymApp.API.Infraestructura.Repositorios.Cliente.Cliente;
 using EnergymApp.API.Infraestructura.Repositorios.Configuraciones.ModalidadGrupalRepo;
 using EnergymApp.API.Infraestructura.Repositorios.Configuraciones.TipoPlanes;
 using EnergymApp.API.Infraestructura.Repositorios.Grupos.ModalidadGrupalRepo;
+using EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.CamposSeguimiento;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -15,6 +16,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EnergymApp.API.Infraestructura.Repositorios.Configuraciones.CamposSeguimiento;
+using EnergymApp.API.Aplicacion.Servicios.Servicios.Configuraciones.Oportunidades;
+using EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.TiposDePlanes;
+using EnergymApp.API.Infraestructura.Repositorios.Configuraciones.OportunidadesRepo;
 
 namespace EnergymApp
 {
@@ -33,7 +38,17 @@ namespace EnergymApp
             services.AddControllers();
             services.AddTransient<IClientesAppService, ClientesAppService>();
             services.AddTransient<IClientesRepositorio, ClientesRepositorio>();
+
+            services.AddTransient<ITipoPlanesAppService, TipoPlanesAppService>();
             services.AddTransient<ITipoPlanesRepositorio, TipoPlanesRepositorio>();
+
+
+            services.AddTransient<IOportunidadesAppService, OportunidadesAppService>();
+            services.AddTransient<IOportunidadesRepositorio, OportunidadesRepositorio>();
+
+            services.AddTransient<ICamposSeguimientoRepositorio, CamposSeguimientoRepositorio>();
+            services.AddTransient<ICamposSeguimientoAppService, CamposSeguimientoAppService>();
+            
             services.AddTransient<IModalidadGrupalRepositorio, ModalidadGrupalRepositorio>();
         }
 
@@ -42,10 +57,10 @@ namespace EnergymApp
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
             }
+                app.UseDeveloperExceptionPage();
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 

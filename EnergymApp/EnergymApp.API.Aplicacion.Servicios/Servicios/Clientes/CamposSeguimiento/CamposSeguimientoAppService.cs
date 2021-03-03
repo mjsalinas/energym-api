@@ -8,7 +8,7 @@ using System.Text;
 
 
 namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.CamposSeguimiento
-{  
+{
     public class CamposSeguimientoAppService : ICamposSeguimientoAppService
     {
 
@@ -20,19 +20,19 @@ namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.CamposSeguimien
             _campoSeguimientoRepositorio = campoSeguimientoRepositorio;
         }
 
-        public List<CamposSeguimientoDTO> ObetenerCamposSeguimiento(ObtenerCamposSeguimientoRequest request)
+        public List<CamposSeguimientoDTO> ObtenerCamposSeguimiento(ObtenerCamposSeguimientoRequest request)
         {
             List<CamposSeguimientoDTO> camposSeguimientoListados = _campoSeguimientoRepositorio.ObtenerCamposSeguimiento();
             return camposSeguimientoListados;
         }
-        public CamposSeguimientoDTO GuardarCamposSeguimientoRequest(GuardarCamposSeguimientoRequest request, CamposSeguimientoDTO camposSeguimientoDTO)
+        public CamposSeguimientoDTO GuardarCamposSeguimiento(GuardarCamposSeguimientoRequest request)
         {
             if (request.IdCampoSeguimiento == null) throw new ArgumentNullException("IdCampoSeguimientovacio");
             if (request.IdUnidadMedida == null) throw new ArgumentNullException("IdUnidadMedidavacio");
             if (request.CampoSeguimiento1 == null) throw new ArgumentNullException("CampoSeguimientovacio");
 
 
-            CamposSeguimientoDTO tipoPlanesDTO = new CamposSeguimientoDTO
+            CamposSeguimientoDTO camposSeguimientoDTO = new CamposSeguimientoDTO
             {
                 IdCampoSeguimiento = request.IdCampoSeguimiento,
                 IdUnidadMedida = request.IdUnidadMedida,
@@ -48,15 +48,7 @@ namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.CamposSeguimien
             return null;
         }
 
-        public List<CamposSeguimientoDTO> ObtenerCamposSeguimiento(ObtenerCamposSeguimientoRequest request)
-        {
-            throw new NotImplementedException();
-        }
 
-        public CamposSeguimientoDTO GuardarCamposSeguimiento(GuardarCamposSeguimientoRequest request)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
 

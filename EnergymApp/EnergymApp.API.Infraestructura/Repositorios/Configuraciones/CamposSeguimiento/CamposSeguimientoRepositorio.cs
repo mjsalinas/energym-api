@@ -9,8 +9,8 @@ using EnergymApp.API.Aplicacion.DTOs.Configuraciones.CamposSeguimiento;
 namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.CamposSeguimiento
 {
   
-        public class CamposSeguimientoRepositorio
-        {
+        public class CamposSeguimientoRepositorio: ICamposSeguimientoRepositorio
+    {
             private const string MensajeErrorInexistencia = "Unidad de Medida no existe";
             public List<CamposSeguimientoDTO> ObtenerCamposSeguimiento()
             {
@@ -31,7 +31,7 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.CamposSegu
                 return CamposSeguimientoDTO;
             }
 
-            public CamposSeguimientoDTO GuardarUnidadMedida(CamposSeguimientoDTO campoSeguimiento)
+            public CamposSeguimientoDTO GuardarCamposSeguimiento(CamposSeguimientoDTO campoSeguimiento)
             {
                 try
                 {
@@ -56,12 +56,9 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.CamposSegu
                 }
             }
 
-            public CamposSeguimientoDTO GuardarCampoSeguimiento(CamposSeguimientoDTO camposSeguimientoDTO)
-            {
-                throw new NotImplementedException();
-            }
+            
 
-            public CamposSeguimientoDTO ModificarUnidadMedida(CamposSeguimientoDTO campoSeguimiento)
+            public CamposSeguimientoDTO modificarCamposSeguimiento(CamposSeguimientoDTO campoSeguimiento)
             {
                 try
                 {
