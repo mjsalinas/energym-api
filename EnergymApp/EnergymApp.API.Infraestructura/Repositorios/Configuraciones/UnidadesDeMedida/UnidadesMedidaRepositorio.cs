@@ -8,7 +8,7 @@ using EnergymApp.API.Aplicacion.DTOs.Configuraciones.UnidadesMedida;
 
 namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.UnidadesDeMedida
 {
-    public class UnidadesMedidaRepositorio
+    public class UnidadesMedidaRepositorio: IUnidadesMedidaRepositorio
     {
         public List<UnidadesMedidaDTO> ObtenerUnidadesMedida()
         {
