@@ -36,6 +36,7 @@ namespace EnergymApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
             services.AddTransient<IClientesAppService, ClientesAppService>();
             services.AddTransient<IClientesRepositorio, ClientesRepositorio>();
 
@@ -48,7 +49,7 @@ namespace EnergymApp
 
             services.AddTransient<ICamposSeguimientoRepositorio, CamposSeguimientoRepositorio>();
             services.AddTransient<ICamposSeguimientoAppService, CamposSeguimientoAppService>();
-            
+
             services.AddTransient<IModalidadGrupalRepositorio, ModalidadGrupalRepositorio>();
         }
 
@@ -57,10 +58,10 @@ namespace EnergymApp
         {
             if (env.IsDevelopment())
             {
+                app.UseHttpsRedirection();
             }
-                app.UseDeveloperExceptionPage();
+            app.UseDeveloperExceptionPage();
 
-            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
