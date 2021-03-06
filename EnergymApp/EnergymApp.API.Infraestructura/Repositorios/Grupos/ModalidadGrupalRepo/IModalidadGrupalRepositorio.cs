@@ -8,5 +8,9 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Grupos.ModalidadGrupalRepo
     public interface IModalidadGrupalRepositorio
     {
         public ModalidadGrupalDTO ObtenerGrupoPorId(int id);
+        public List<ModalidadGrupalDTO> ObtenerModalidadGrupal();
+        public ModalidadGrupalDTO GuardarModalidadGrupal(ModalidadGrupalDTO modalidadGrupal);
+        public ModalidadGrupalDTO ModificarModalidadGrupal(ModalidadGrupalDTO modalidadGrupal);
+
     }
 }
