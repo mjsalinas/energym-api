@@ -26,6 +26,7 @@ using EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.DatosSeguimiento;
 using EnergymApp.API.Infraestructura.Repositorios.Cliente.DatosSeguimientoRepositorio;
 using EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.RegistroPagosServicios;
 using EnergymApp.API.Infraestructura.Repositorios.Cliente.RegistroPagosRepositorio;
+using EnergymApp.API.Aplicacion.Servicios.Servicios.Grupos;
 
 namespace EnergymApp
 {
@@ -66,6 +67,9 @@ namespace EnergymApp
             
             services.AddTransient<IRegistroPagosAppService, RegistroPagosAppService>();
             services.AddTransient<IRegistroPagosRepositorio, RegistroPagosRepositorio>();
+            
+            services.AddTransient<IModalidadGrupalAppService, ModalidadGrupalAppService>();
+            services.AddTransient<IModalidadGrupalRepositorio, ModalidadGrupalRepositorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
