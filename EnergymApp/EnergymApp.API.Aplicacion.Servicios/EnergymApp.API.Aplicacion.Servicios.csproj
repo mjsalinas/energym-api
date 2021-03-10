@@ -9,7 +9,6 @@
     <Folder Include="Servicios\Clientes\Pagos\" />
     <Folder Include="Servicios\Configuraciones\" />
     <Folder Include="Servicios\Clientes\RegistroPagosServicios\" />
-    <Folder Include="Servicios\Grupos\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <Folder Include="DTOs\Clientes\Pagos\" />
-    <Folder Include="DTOs\Grupos\ModalidadGrupalDTO\" />
+    <Folder Include="DTOs\Grupos\" />
   </ItemGroup>
 
 </Project>

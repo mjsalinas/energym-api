@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using EnergymApp.API.Aplicacion.DTOs.Clientes.Clientes;
 using EnergymApp.API.Aplicacion.DTOs.Clientes.RegistroPagosDTO;
 using EnergymApp.API.DTO.DTOs.Clientes.RegistroPagosDTO;
 using EnergymApp.API.Infraestructura.Repositorios.Cliente.RegistroPagosRepositorio;
@@ -55,6 +56,12 @@ namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.RegistroPagosSe
         {
             throw new NotImplementedException();
         }
+
+        public void EnviarComprobante (string correo, ClientesDTO cliente, RegistroPagosDTO pagoInfo)
+        {
+
+        }
+
     }
 
 }

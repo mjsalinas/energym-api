@@ -57,13 +57,13 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.ModalidadG
             }
         }
 
-        public ModalidadGrupalDTO ModificarModalidadGrupal(ModalidadGrupalDTO ModalidadGrupal)
+        public ModalidadGrupalDTO ModificarModalidadGrupal(ModalidadGrupalDTO modalidadGrupal)
         {
             try
             {
                 ContextoEnergym db = new ContextoEnergym();
 
-                ModalidadGrupal modalidadGrupalEntidad = db.ModalidadGrupal.FirstOrDefault(camSeg => camSeg.IdGrupo == ModalidadGrupal.IdGrupo);
+                ModalidadGrupal modalidadGrupalEntidad = db.ModalidadGrupal.FirstOrDefault(camSeg => camSeg.IdGrupo == modalidadGrupal.IdGrupo);
                 if (modalidadGrupalEntidad == null)
                 {
                     return new ModalidadGrupalDTO
@@ -71,12 +71,12 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.ModalidadG
                         MensajeDeError = MensajeErrorInexistencia
                     };
                 };
-                modalidadGrupalEntidad.IdGrupo = ModalidadGrupal.IdGrupo;
-                modalidadGrupalEntidad.IdPlan = ModalidadGrupal.IdPlan;
-                modalidadGrupalEntidad.LiderGrupo = ModalidadGrupal.LiderDeGrupo;
-                modalidadGrupalEntidad.GrupoActivo = ModalidadGrupal.GrupoActivo;
+                modalidadGrupalEntidad.IdGrupo = modalidadGrupal.IdGrupo;
+                modalidadGrupalEntidad.IdPlan = modalidadGrupal.IdPlan;
+                modalidadGrupalEntidad.LiderGrupo = modalidadGrupal.LiderDeGrupo;
+                modalidadGrupalEntidad.GrupoActivo = modalidadGrupal.GrupoActivo;
                 db.SaveChanges();
-                return ModalidadGrupal;
+                return modalidadGrupal;
             }
             catch (Exception ex)
             {
