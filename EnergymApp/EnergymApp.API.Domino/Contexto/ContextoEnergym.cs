@@ -35,7 +35,7 @@ namespace EnergymApp.API.Domino.Contexto
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySql("data source=157.230.13.243;user=sa;password=password;initial catalog=energym", x => x.ServerVersion("8.0.21-mysql"));
+                optionsBuilder.UseMySql("data source=157.230.13.243;user=sa;password=password;initial catalog=energym", x => x.ServerVersion("8.0.23-mysql"));
             }
         }
 

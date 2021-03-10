@@ -29,7 +29,7 @@ namespace EnergymApp.Controllers.Configuraciones.Oportunidades
         public IActionResult GuardarOportunidad(NuevaOportunidadRequest request)
         {
             var oportunidad = _IOportunidadesAppService.GuardarOportunidad(request);
-            if (oportunidad.MensajeDeError == string.Empty)
+            if (string.IsNullOrEmpty(oportunidad.MensajeDeError))
             {
                 return Ok(oportunidad);
             }

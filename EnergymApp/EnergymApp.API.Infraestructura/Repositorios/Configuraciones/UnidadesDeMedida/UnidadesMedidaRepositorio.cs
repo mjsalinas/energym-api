@@ -15,7 +15,7 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.UnidadesDe
             ContextoEnergym db = new ContextoEnergym();
             List<UnidadesMedida> unidadesMedida = db.UnidadesMedida.ToList();
             List<UnidadesMedidaDTO> unidadesMedidaDTO = new List<UnidadesMedidaDTO>();
-
+            var a = db.UnidadesMedida.Count();
             foreach (var unidadMedida in unidadesMedida)
             {
                 unidadesMedidaDTO.Add(new UnidadesMedidaDTO

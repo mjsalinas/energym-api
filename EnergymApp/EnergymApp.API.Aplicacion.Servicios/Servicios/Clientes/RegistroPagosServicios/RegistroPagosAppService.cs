@@ -30,7 +30,7 @@ namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.RegistroPagosSe
         {
             if (request.IdPagos == null) throw new ArgumentNullException("idPagosVacio");
             if (request.IdCliente == null) throw new ArgumentNullException("idClienteVacio");
-            if (request.EstadoDePago == null || request.EstadoDePago == String.Empty) throw new ArgumentNullException("estadoDePagoVacio");
+            if (string.IsNullOrEmpty(request.EstadoDePago)) throw new ArgumentNullException("estadoDePagoVacio");
             if (request.FechaRealizacionPago == null)
             {
                 request.FechaRealizacionPago = System.DateTime.Now;

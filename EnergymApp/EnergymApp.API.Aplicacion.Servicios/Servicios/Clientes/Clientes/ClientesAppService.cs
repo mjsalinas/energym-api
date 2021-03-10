@@ -34,9 +34,9 @@ namespace EnergymApp.API.Aplicacion.Servicios.Clientes.Clientes
         }
         public ClientesDTO CrearNuevoCliente(NuevoClienteRequest request)
         {
-            if (request.Nombre == null || request.Nombre == String.Empty) throw new ArgumentNullException("nombreDeClienteVacio");
-            if (request.NumeroTelefono == null || request.NumeroTelefono == String.Empty) throw new ArgumentNullException("numeroTelefonoVacio");
-            if (request.Correo == null || request.Correo == String.Empty) throw new ArgumentNullException("correoVacio");
+            if ( string.IsNullOrEmpty(request.Nombre)) throw new ArgumentNullException("nombreDeClienteVacio");
+            if (string.IsNullOrEmpty(request.NumeroTelefono)) throw new ArgumentNullException("numeroTelefonoVacio");
+            if (string.IsNullOrEmpty(request.Correo)) throw new ArgumentNullException("correoVacio");
             if (request.TipoPlan == null) throw new ArgumentNullException("idTipoDePlanVacio");
             if (request.IdGrupo == null) throw new ArgumentNullException("idGrupoVacio");
             if (request.FechaIngreso == null)

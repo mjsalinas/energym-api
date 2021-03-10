@@ -30,7 +30,7 @@ namespace EnergymApp.Controllers.Clientes
             public IActionResult NuevoTipoPlanRequest(NuevoTipoPlanRequest request)
             {
                 var TipoPlanes = _iTipoPlanesAppService.GuardarTipoPlan(request);
-                if (TipoPlanes.MensajeDeError == string.Empty)
+                if (string.IsNullOrEmpty(TipoPlanes.MensajeDeError))
                 {
                     return Ok(TipoPlanes);
                 }
@@ -43,7 +43,7 @@ namespace EnergymApp.Controllers.Clientes
             public IActionResult ModificarTipoPlanRequest(ModificarTipoPlanRequest request)
             {
                 var TipoPlanes = _iTipoPlanesAppService.ModificarTipoPlan(request);
-                if (TipoPlanes.MensajeDeError == string.Empty)
+                if (string.IsNullOrEmpty(TipoPlanes.MensajeDeError))
                 {
                     return Ok(TipoPlanes);
                 }

@@ -30,7 +30,7 @@ namespace EnergymApp.Controllers.Configuraciones.UnidadesMedida
         public IActionResult GuardarUnidadMedida(NuevaUnidadMedidadRequest request)
         {
             var unidadMedida = _iUnidadesMedidaAppService.CrearNuevaUnidadMedida(request);
-            if (unidadMedida.MensajeDeError == string.Empty)
+            if (string.IsNullOrEmpty(unidadMedida.MensajeDeError))
             {
                 return Ok(unidadMedida);
             }
@@ -43,7 +43,7 @@ namespace EnergymApp.Controllers.Configuraciones.UnidadesMedida
         public IActionResult ModificarCliente(ModificarUnidadMedidadRequest request)
         {
             var unidadMedida = _iUnidadesMedidaAppService.ModificarUnidadMedida(request);
-            if (unidadMedida.MensajeDeError == string.Empty)
+            if (string.IsNullOrEmpty(unidadMedida.MensajeDeError))
             {
                 return Ok(unidadMedida);
             }

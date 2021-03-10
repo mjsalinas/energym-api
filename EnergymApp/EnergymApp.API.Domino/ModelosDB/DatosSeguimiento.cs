@@ -11,7 +11,7 @@ namespace EnergymApp.API.Domino.ModelosDB
     {
         public int IdCamposSeguimiento { get; set; }
         public int IdCliente { get; set; }
-        public string DatoSeguimiento { get; set; }
         public DateTime FechaRegistro { get; set; }
+        public string DatoSeguimiento { get; set; }
     }
 }
