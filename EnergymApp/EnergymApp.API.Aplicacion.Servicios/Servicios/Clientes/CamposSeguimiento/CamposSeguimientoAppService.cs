@@ -45,7 +45,16 @@ namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.CamposSeguimien
 
         public CamposSeguimientoDTO ModificarCamposSeguimiento(ModificarCamposSeguimientoRequest request)
         {
-            return null;
+            CamposSeguimientoDTO camposSeguimientoDTO = new CamposSeguimientoDTO
+            {
+                IdCampoSeguimiento = request.IdCampoSeguimiento,
+                IdUnidadMedida = request.IdUnidadMedida,
+                CampoSeguimiento1 = request.CampoSeguimiento1,
+                RegistroOculto = request.RegistroOculto,
+            };
+
+            CamposSeguimientoDTO response = _campoSeguimientoRepositorio.GuardarCamposSeguimiento(camposSeguimientoDTO);
+            return response;
         }
 
 

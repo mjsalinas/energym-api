@@ -20,6 +20,7 @@ namespace EnergymApp.API.DTO.DTOs.Configuraciones.CamposSeguimiento
         public int IdCampoSeguimiento { get; set; }
         public int IdUnidadMedida { get; set; }
         public string CampoSeguimiento1 { get; set; }
+        public sbyte RegistroOculto { get; set; }
     }
 
 }

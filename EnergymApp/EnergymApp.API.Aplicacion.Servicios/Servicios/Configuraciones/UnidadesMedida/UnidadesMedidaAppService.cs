@@ -41,7 +41,18 @@ namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Configuraciones.Unidades
 
         public UnidadesMedidaDTO ModificarUnidadMedida(ModificarUnidadMedidadRequest request)
         {
-            return null;
+            if (request.IdUnidadMedida == null) throw new ArgumentException("unidadMedidaVacia");
+
+            UnidadesMedidaDTO unidadMedidaDTO = new UnidadesMedidaDTO
+            {
+                IdUnidadMedida = request.IdUnidadMedida,
+                UnidadMedida = request.UnidadMedida,
+                RegistroOculto = request.RegistroOculto,
+            };
+
+            UnidadesMedidaDTO response = _unidadesMedidaRepositorio.ModificarUnidadMedida(unidadMedidaDTO);
+            return response;
+
         }
     }
 }
