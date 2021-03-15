@@ -28,7 +28,7 @@ namespace EnergymApp.Controllers.Clientes
         public IActionResult CrearCliente(NuevoClienteRequest request)
         {
             var cliente = _iClientesAppService.CrearNuevoCliente(request);
-            if (cliente.MensajeDeError == string.Empty)
+            if (string.IsNullOrEmpty(cliente.MensajeDeError))
             {
                 return Ok(cliente);
             }
@@ -41,7 +41,7 @@ namespace EnergymApp.Controllers.Clientes
         public IActionResult ModificarCliente(ModificarClienteRequest request)
         {
             var cliente = _iClientesAppService.ModificarCliente(request);
-            if (cliente.MensajeDeError == string.Empty)
+            if (string.IsNullOrEmpty(cliente.MensajeDeError))
             {
                 return Ok(cliente);
             }

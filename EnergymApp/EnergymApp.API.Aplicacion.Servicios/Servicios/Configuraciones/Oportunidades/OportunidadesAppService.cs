@@ -24,12 +24,12 @@ namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Configuraciones.Oportuni
         }
         public OportunidadesDTO GuardarOportunidad(NuevaOportunidadRequest request)
         {
-            if (request.Oportunidad == null || request.Oportunidad == string.Empty) throw new ArgumentException("oportunidadVacia");
+            if (string.IsNullOrEmpty(request.Oportunidad)) throw new ArgumentException("oportunidadVacia");
             if (request.FechaTransaccion == null)
             {
                 request.FechaTransaccion = System.DateTime.Now;
             }
-            if (request.TipoOportunidad == null || request.TipoOportunidad == string.Empty) throw new ArgumentException("tipoOportunidadVacia");
+            if (string.IsNullOrEmpty(request.TipoOportunidad)) throw new ArgumentException("tipoOportunidadVacia");
 
             OportunidadesDTO oportunidadesDTO = new OportunidadesDTO
             {

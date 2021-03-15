@@ -14,7 +14,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergymApp.API.Dominio", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergymApp.API.DTO", "EnergymApp.API.Aplicacion\EnergymApp.API.DTO.csproj", "{25609A5F-A296-46B6-9EF5-016FB23B46D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergymApp.API.Aplicacion.Servicios", "EnergymApp.API.Aplicacion.Servicios\EnergymApp.API.Aplicacion.Servicios.csproj", "{69F8BDBC-9886-4C18-A995-62BF7027B40C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnergymApp.API.Aplicacion.Servicios", "EnergymApp.API.Aplicacion.Servicios\EnergymApp.API.Aplicacion.Servicios.csproj", "{69F8BDBC-9886-4C18-A995-62BF7027B40C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{75655A62-BF6F-4939-B6BC-C68106B066AC} = {75655A62-BF6F-4939-B6BC-C68106B066AC}
 	EndProjectSection

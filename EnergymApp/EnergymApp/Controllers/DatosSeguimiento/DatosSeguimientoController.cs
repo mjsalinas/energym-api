@@ -29,7 +29,7 @@ public class DatosSeguimientoController :ControllerBase
     public IActionResult CrearNuevoDatoSeguimiento(NuevoDatosSeguimientoRequest request)
     {
         var datoSeguimiento = _iDatosSeguimientoAppService.CrearNuevoDatoSeguimiento(request);
-        if (datoSeguimiento.MensajeDeError == string.Empty)
+        if (string.IsNullOrEmpty(datoSeguimiento.MensajeDeError))
         {
             return Ok(datoSeguimiento);
         }
@@ -42,7 +42,7 @@ public class DatosSeguimientoController :ControllerBase
     public IActionResult ModificarDatoSeguimiento(ModificarDatosSeguimientoRequest request)
     {
         var datoSeguimiento = _iDatosSeguimientoAppService.ModificarDatoSeguimiento(request);
-        if (datoSeguimiento.MensajeDeError == string.Empty)
+        if (string.IsNullOrEmpty(datoSeguimiento.MensajeDeError))
         {
             return Ok(datoSeguimiento);
         }

@@ -30,7 +30,7 @@ namespace EnergymApp.Controllers.RegistroPagos
         public IActionResult CrearNuevoRegistroPagos(NuevoRegistroPagosRequest request)
         {
             var registroPagos = _iRegistroPagosAppService.CrearNuevoRegistroPagos(request);
-            if (registroPagos.MensajeDeError == string.Empty)
+            if (string.IsNullOrEmpty(registroPagos.MensajeDeError))
             {
                 return Ok(registroPagos);
             }
@@ -43,7 +43,7 @@ namespace EnergymApp.Controllers.RegistroPagos
         public IActionResult ModificarRegistroPagos(ModificarRegistroPagosRequest request)
         {
             var registropagos = _iRegistroPagosAppService.ModificarRegistroPagos(request);
-            if (registropagos.MensajeDeError == string.Empty)
+            if (string.IsNullOrEmpty(registropagos.MensajeDeError))
             {
                 return Ok(registropagos);
             }

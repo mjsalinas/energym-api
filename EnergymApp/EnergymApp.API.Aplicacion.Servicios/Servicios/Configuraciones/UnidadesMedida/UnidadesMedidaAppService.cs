@@ -26,7 +26,7 @@ namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Configuraciones.Unidades
 
         public UnidadesMedidaDTO CrearNuevaUnidadMedida(NuevaUnidadMedidadRequest request)
         {
-            if (request.UnidadMedida == null || request.UnidadMedida == string.Empty) throw new ArgumentException("unidadMedidaVacia");
+            if (string.IsNullOrEmpty(request.UnidadMedida)) throw new ArgumentException("unidadMedidaVacia");
             
             UnidadesMedidaDTO unidadMedidaDTO = new UnidadesMedidaDTO
             {

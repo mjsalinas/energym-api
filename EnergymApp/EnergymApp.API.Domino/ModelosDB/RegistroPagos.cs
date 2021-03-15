@@ -17,9 +17,4 @@ namespace EnergymApp.API.Domino.ModelosDB
 
         public virtual Pagos IdPagosNavigation { get; set; }
     }
-
-
-
-
-
 }

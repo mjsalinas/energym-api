@@ -30,7 +30,7 @@ namespace EnergymApp.Controllers.Clientes
         public IActionResult GuardarCamposSeguimiento(GuardarCamposSeguimientoRequest request)
         {
             var CamposSeguimiento = _iCamposSeguimientoAppService.GuardarCamposSeguimiento(request);
-            if (CamposSeguimiento.MensajeDeError == string.Empty)
+            if (string.IsNullOrEmpty(CamposSeguimiento.MensajeDeError))
             {
                 return Ok(CamposSeguimiento);
             }
@@ -43,7 +43,7 @@ namespace EnergymApp.Controllers.Clientes
         public IActionResult ModificarCamposSeguimiento(ModificarCamposSeguimientoRequest request)
         {
             var CamposSeguimiento = _iCamposSeguimientoAppService.ModificarCamposSeguimiento(request);
-            if (CamposSeguimiento.MensajeDeError == string.Empty)
+            if (string.IsNullOrEmpty(CamposSeguimiento.MensajeDeError))
             {
                 return Ok(CamposSeguimiento);
             }
