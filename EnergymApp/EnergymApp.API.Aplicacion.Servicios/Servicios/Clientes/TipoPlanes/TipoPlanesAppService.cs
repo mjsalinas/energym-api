@@ -43,7 +43,20 @@ namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.TiposDePlanes
 
       public TipoPlanesDTO ModificarTipoPlan(ModificarTipoPlanRequest request)
         {
-            return null;
+            if (request.NombrePlan == null) throw new ArgumentNullException("NombrePlanvacio");
+            if (request.NoIntegrantes == null) throw new ArgumentNullException("NoIntregantesvacio");
+            if (request.CostoPlan == null) throw new ArgumentNullException("CostoDePlanvacio");
+
+
+            TipoPlanesDTO tipoPlanesDTO = new TipoPlanesDTO
+            {
+                NombrePlan = request.NombrePlan,
+                NoIntegrantes = request.NoIntegrantes,
+                CostoPlan = request.CostoPlan,
+            };
+
+            TipoPlanesDTO response = _tipoPlanesRepositorio.ModificarTipoPlan(tipoPlanesDTO);
+            return response;
         }
 
         public TipoPlanesDTO ObtenerTipoPlanId(ObtenerIdTipoPlanesRequest request)

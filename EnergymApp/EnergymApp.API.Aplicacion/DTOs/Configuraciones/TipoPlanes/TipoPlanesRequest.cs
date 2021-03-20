@@ -22,7 +22,7 @@ namespace EnergymApp.API.DTO.DTOs.Configuraciones.TipoPlanes
 
     public class ModificarTipoPlanRequest
     {
-
+        public int IdPlan { get; set; }
         public string NombrePlan { get; set; }
         public int NoIntegrantes { get; set; }
         public decimal CostoPlan { get; set; }

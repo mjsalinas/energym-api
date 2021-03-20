@@ -56,6 +56,34 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.TipoPlanes
                 };
             }
         }
+        public TipoPlanesDTO ModificarTipoPlan(TipoPlanesDTO tipoDePlan)
+        {
+            try
+            {
+                ContextoEnergym db = new ContextoEnergym();
+                TipoDePlan tipoPlanEntidad = db.TipoDePlan.FirstOrDefault(x => x.IdPlan == tipoDePlan.IdPlan);
+
+                if (tipoPlanEntidad == null)
+                {
+                    return new TipoPlanesDTO
+                    {
+                        MensajeDeError = "Unidad de Medida no existe"
+                    };
+                };
+                tipoPlanEntidad.NombrePlan = tipoDePlan.NombrePlan;
+                tipoPlanEntidad.CostoPlan = tipoDePlan.CostoPlan;
+                tipoPlanEntidad.NoIntegrantes = tipoDePlan.NoIntegrantes;
+                db.SaveChanges();
+                return tipoDePlan;
+            }
+            catch (Exception ex)
+            {
+                return new TipoPlanesDTO
+                {
+                    MensajeDeError = ex.Message
+                };
+            }
+        }
         public TipoPlanesDTO ObtenerTipoPlanId(int id)
         {
             ContextoEnergym db = new ContextoEnergym();

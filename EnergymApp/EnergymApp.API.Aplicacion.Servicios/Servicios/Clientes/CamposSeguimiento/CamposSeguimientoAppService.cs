@@ -53,7 +53,7 @@ namespace EnergymApp.API.Aplicacion.Servicios.Servicios.Clientes.CamposSeguimien
                 RegistroOculto = request.RegistroOculto,
             };
 
-            CamposSeguimientoDTO response = _campoSeguimientoRepositorio.GuardarCamposSeguimiento(camposSeguimientoDTO);
+            CamposSeguimientoDTO response = _campoSeguimientoRepositorio.modificarCamposSeguimiento(camposSeguimientoDTO);
             return response;
         }
 

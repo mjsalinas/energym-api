@@ -10,7 +10,7 @@ namespace EnergymApp.API.Infraestructura.Repositorios.Configuraciones.TipoPlanes
         public List<TipoPlanesDTO> ObtenerTipoPlanes();
         public TipoPlanesDTO ObtenerTipoPlanId(int id);
         public TipoPlanesDTO GuardarTipoPlan(TipoPlanesDTO tipoDePlan);
-        //public TipoPlanesDTO ModificarTipoPlan(TipoPlanesDTO tipoDePlan);
+        public TipoPlanesDTO ModificarTipoPlan(TipoPlanesDTO tipoDePlan);
 
     }
 }
